@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIJAL | Pure Wood/Cold-Pressed Oils</title>
+    <meta name="description" content="A premium, traditional, health-conscious cold-pressed oil brand rooted in authenticity — chekku/kachi ghani wooden extraction, purity, and farm-to-bottle trust.">
+    <!-- Google Fonts: Playfair Display (Serif) for headings, Inter (Sans-serif) for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">TRIJAL</a>
+            <nav class="nav">
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#products" class="nav-link">Shop</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg parallax" style="background-image: url('assets/images/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in-up">
+            <h1 class="hero-title">Pure. Traditional. Cold-Pressed the Way Nature Intended.</h1>
+            <p class="hero-subtitle">Authentic 'chekku/kachi ghani' extraction. 100% natural, unrefined, and chemical-free.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#process" class="btn btn-secondary">Our Process</a>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge"><span class="badge-icon">🌿</span> 100% Chemical-Free</div>
+                <div class="badge"><span class="badge-icon">🛡️</span> No Preservatives</div>
+                <div class="badge"><span class="badge-icon">🪵</span> Traditional Wood-Pressed</div>
+                <div class="badge"><span class="badge-icon">🌾</span> Farm Sourced</div>
+            </div>
+        </div>
+        <!-- Subtle floating seed animation container -->
+        <div class="floating-elements" id="floating-elements"></div>
+    </section>
+
+    <!-- 2. About/Brand Story Section -->
+    <section class="about section" id="about">
+        <div class="container split-layout">
+            <div class="about-image-container fade-in-left">
+                <img src="assets/images/about.png" alt="Traditional Wooden Ghani" class="about-image parallax-img">
+                <div class="experience-badge">
+                    <span class="number">3</span>
+                    <span class="text">Generations of<br>Trust</span>
+                </div>
+            </div>
+            <div class="about-text fade-in-right">
+                <span class="section-tag">Our Heritage</span>
+                <h2 class="section-title">Rooted in Tradition,<br>Crafted for Health.</h2>
+                <p class="section-desc">At TRIJAL, we believe that true wellness comes from nature in its purest form. For three generations, our family has preserved the ancient art of 'chekku' or 'kachi ghani' wooden cold-pressing. We source the finest sun-dried seeds directly from local farmers and extract the oil at low temperatures, ensuring every drop retains its natural aroma, flavor, and vital nutrients.</p>
+                <p class="section-desc">No heat. No chemicals. Just pure, farm-to-bottle goodness.</p>
+                
+                <div class="about-icons">
+                    <div class="icon-item">
+                        <span class="icon">🪵</span>
+                        <span class="label">Traditional Extraction</span>
+                    </div>
+                    <div class="icon-item">
+                        <span class="icon">👩‍🌾</span>
+                        <span class="label">Locally Sourced</span>
+                    </div>
+                    <div class="icon-item">
+                        <span class="icon">🏺</span>
+                        <span class="label">Small-Batch</span>
+                    </div>
+                    <div class="icon-item">
+                        <span class="icon">🍾</span>
+                        <span class="label">Glass Packaging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Product Showcase Section -->
+    <section class="products section bg-light" id="products">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-tag">Shop Pure Oils</span>
+                <h2 class="section-title">Nature's Golden Elixir</h2>
+                <p class="section-desc mx-auto">Explore our range of premium wood-pressed oils, extracted to preserve maximum nutrition.</p>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Process / How It's Made Section -->
+    <section class="process section" id="process">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-tag">How It's Made</span>
+                <h2 class="section-title">The TRIJAL Process</h2>
+                <p class="section-desc mx-auto">No shortcuts, no chemicals. Just patience and tradition.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in-left" style="animation-delay: 0.1s;">
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-content">
+                        <h3>Seed Sourcing</h3>
+                        <p>We source only premium, non-GMO seeds directly from local farming communities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-right" style="animation-delay: 0.2s;">
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-content">
+                        <h3>Sun Drying</h3>
+                        <p>Seeds are naturally sun-dried to optimal moisture levels to concentrate flavor and nutrients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-left" style="animation-delay: 0.3s;">
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-content">
+                        <h3>Wood Pressing</h3>
+                        <p>Crushed in a traditional wooden 'ghani' at low RPM to ensure the temperature never rises, keeping nutrients intact.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-right" style="animation-delay: 0.4s;">
+                    <div class="timeline-icon">4</div>
+                    <div class="timeline-content">
+                        <h3>Natural Settling & Filtering</h3>
+                        <p>The oil is allowed to settle naturally and filtered through cotton cloth without any chemical solvents.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-left" style="animation-delay: 0.5s;">
+                    <div class="timeline-icon">5</div>
+                    <div class="timeline-content">
+                        <h3>Bottling</h3>
+                        <p>Packaged in eco-friendly glass bottles to preserve the pristine quality, taste, and aroma.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Cold-Pressed Section -->
+    <section class="benefits section bg-light" id="benefits">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-tag">The Difference</span>
+                <h2 class="section-title">Refined vs. Wood-Pressed</h2>
+                <p class="section-desc mx-auto">Discover why making the switch to TRIJAL is the best choice for your family's health.</p>
+            </div>
+            
+            <div class="comparison-container fade-in-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight-col">TRIJAL Wood-Pressed</th>
+                            <th>Regular Refined Oil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Extraction Method</td>
+                            <td class="highlight-col">Traditional Wooden Ghani (Low Heat)</td>
+                            <td>High Heat & Chemical Solvents</td>
+                        </tr>
+                        <tr>
+                            <td>Nutrient Retention</td>
+                            <td class="highlight-col">100% Retained (Vitamins, Antioxidants)</td>
+                            <td>Destroyed during processing</td>
+                        </tr>
+                        <tr>
+                            <td>Aroma & Flavor</td>
+                            <td class="highlight-col">Natural, Rich, Authentic</td>
+                            <td>Bland, Deodorized</td>
+                        </tr>
+                        <tr>
+                            <td>Heart Health</td>
+                            <td class="highlight-col">Good Cholesterol (HDL), No Trans Fats</td>
+                            <td>Contains Trans Fats & Bad Cholesterol</td>
+                        </tr>
+                        <tr>
+                            <td>Additives</td>
+                            <td class="highlight-col">Zero Chemicals, Zero Preservatives</td>
+                            <td>Bleach, Hexane, Anti-foaming agents</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="benefits-icons">
+                <div class="b-icon-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="b-icon">❤️</div>
+                    <h4>Heart Health</h4>
+                    <p>Rich in MUFA and PUFA for a healthy cardiovascular system.</p>
+                </div>
+                <div class="b-icon-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="b-icon">🛡️</div>
+                    <h4>Rich in Antioxidants</h4>
+                    <p>Fights free radicals and boosts immunity naturally.</p>
+                </div>
+                <div class="b-icon-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="b-icon">😋</div>
+                    <h4>Natural Aroma</h4>
+                    <p>Enhances the taste of your food with authentic flavor.</p>
+                </div>
+                <div class="b-icon-card fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="b-icon">🩸</div>
+                    <h4>No Bad Cholesterol</h4>
+                    <p>Zero trans fats, promoting overall well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Store Location / Map Section -->
+    <section class="location section" id="location">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-tag">Visit Us</span>
+                <h2 class="section-title">Our Store Location</h2>
+                <p class="section-desc mx-auto">Come visit our traditional 'chekku' and see the pure extraction process live.</p>
+            </div>
+            <div class="map-container fade-in-up">
+                <!-- Google Maps embed link for Trijal Wood/Cold Pressed Oils -->
+                <iframe src="https://maps.google.com/maps?q=Trijal%20Wood%20Cold%20Pressed%20Oils%20Vidyaranyapura%20Bengaluru&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2 class="footer-logo">TRIJAL</h2>
+                <p>Pure. Traditional. Cold-Pressed.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#about">Our Story</a>
+                <a href="#products">Shop</a>
+                <a href="#process">Process</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>support@trijaloils.com</p>
+                <p>+91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 TRIJAL Wood/Cold-Pressed Oils. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

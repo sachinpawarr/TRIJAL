@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - TRIJAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #C17336;
+            --color-light: #f4f4f4;
+            --color-dark: #333;
+            --color-white: #fff;
+            --font-body: 'Inter', sans-serif;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-light);
+            margin: 0;
+            padding: 20px;
+            color: var(--color-dark);
+        }
+        .admin-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--color-light);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            color: var(--color-primary);
+        }
+        .btn {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        .product-img-preview {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .size-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .size-group input {
+            flex: 1;
+        }
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="admin-container">
+    <div class="header">
+        <h1>TRIJAL Admin Panel</h1>
+        <div>
+            <a href="index.html" class="back-link" style="margin-right: 20px;">&larr; View Website</a>
+            <button class="btn" id="add-btn">Add New Product</button>
+        </div>
+    </div>
+    
+    <div id="alert-msg" style="padding: 10px; margin-bottom: 20px; display: none; border-radius: 4px;"></div>
+
+    <table id="products-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Base Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="products-body">
+            <!-- Populated via JS -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal" id="product-modal">
+    <div class="modal-content">
+        <h2 id="modal-title">Add Product</h2>
+        <form id="product-form">
+            <input type="hidden" id="product-id">
+            
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" id="product-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Product Image</label>
+                <input type="file" id="product-image-file" accept="image/*">
+                <div id="image-preview" style="margin-top: 10px;"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Short Description</label>
+                <textarea id="product-desc" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Hover Info (Comma separated)</label>
+                <input type="text" id="product-hover" placeholder="e.g., Rich in Vitamin E, Zero Trans Fat">
+            </div>
+
+            <div class="form-group">
+                <label>Sizes & Pricing</label>
+                <div id="sizes-container">
+                    <!-- Size inputs -->
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="add-size-btn" style="padding: 5px 10px; margin-top: 10px;">+ Add Size Option</button>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                <button type="submit" class="btn" id="save-btn">Save Product</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>
