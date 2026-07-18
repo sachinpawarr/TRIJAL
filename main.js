@@ -1,7 +1,7 @@
 // main.js - TRIJAL Wood-Pressed Oils
 import { getAllProducts } from './db.js';
 
-const WHATSAPP_NUMBER = "919113027671"; // TRIJAL WhatsApp Number
+const WHATSAPP_NUMBER = "918296317095"; // TRIJAL WhatsApp Number
 
 document.addEventListener('DOMContentLoaded', () => {
     
