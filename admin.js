@@ -182,10 +182,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 sizes.push({
                     size,
                     price,
-                    selected: index === 1 || false 
+                    selected: false 
                 });
             });
-            if (sizes.length > 0) sizes[0].selected = true; 
+            if (sizes.length > 1) {
+                sizes[1].selected = true;
+            } else if (sizes.length > 0) {
+                sizes[0].selected = true;
+            }
 
             const newProduct = {
                 id,

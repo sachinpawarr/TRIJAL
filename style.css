@@ -882,3 +882,33 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        height: 400px;
+    }
+    
+    .experience-badge {
+        width: 120px;
+        height: 120px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .experience-badge .number {
+        font-size: 2rem;
+    }
+}
